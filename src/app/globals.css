@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ------------------------------------------------------------------ *
+ * Token warna — ubah nilai di sini untuk mengganti identitas visual  *
+ * ------------------------------------------------------------------ */
+:root {
+  --background: #f7faf8;
+  --foreground: #14231c;
+
+  --card: #ffffff;
+  --card-foreground: #14231c;
+
+  --muted: #eef3f0;
+  --muted-foreground: #566a61;
+
+  --primary: #1f7a4d;
+  --primary-foreground: #ffffff;
+
+  --secondary: #c1902e;
+  --secondary-foreground: #1c1405;
+
+  --accent: #e7f2ec;
+  --accent-foreground: #17593a;
+
+  --border: #dde6e1;
+  --input: #dde6e1;
+  --ring: #1f7a4d;
+
+  --radius: 0.9rem;
+}
+
+.dark {
+  --background: #0a1310;
+  --foreground: #e7efea;
+
+  --card: #10201a;
+  --card-foreground: #e7efea;
+
+  --muted: #16261f;
+  --muted-foreground: #9cb0a6;
+
+  --primary: #38b477;
+  --primary-foreground: #04140c;
+
+  --secondary: #ddb35c;
+  --secondary-foreground: #1c1405;
+
+  --accent: #16302440;
+  --accent-foreground: #8fdcb5;
+
+  --border: #21322a;
+  --input: #21322a;
+  --ring: #38b477;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-jakarta), var(--font-inter), ui-sans-serif, sans-serif;
+
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 0.4rem);
+  --radius-2xl: calc(var(--radius) + 0.8rem);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+  ::selection {
+    background-color: color-mix(in srgb, var(--primary) 25%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Pola dekoratif lembut untuk header halaman */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--foreground) 5%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--foreground) 5%, transparent) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes accordion-down {
+  from { height: 0; opacity: 0; }
+  to { height: var(--radix-accordion-content-height); opacity: 1; }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); opacity: 1; }
+  to { height: 0; opacity: 0; }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slide-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
