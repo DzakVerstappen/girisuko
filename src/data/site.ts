@@ -13,15 +13,19 @@ export type NavItem = {
 export const site = {
   name: "Kalurahan Girisuko",
   shortName: "Girisuko",
-  tagline: "Guyub, Maju, dan Lestari di Kaki Perbukitan Panggang",
+  tagline: "Guyub, Gotong Royong, dan Lestari di Perbukitan Karst Panggang",
+  founded: "15 Agustus 1944",
+  desaWisata: true,
+  jadestaUrl: "https://jadesta.kemenparekraf.go.id",
   description:
     "Website resmi Kalurahan Girisuko, Kapanewon Panggang, Kabupaten Gunungkidul, " +
-    "Daerah Istimewa Yogyakarta. Informasi pemerintahan, layanan publik, potensi, " +
-    "dan transparansi anggaran desa.",
+    "Daerah Istimewa Yogyakarta. Informasi pemerintahan, layanan publik, potensi " +
+    "wisata karst, ekonomi warga, dan transparansi anggaran kalurahan. Girisuko " +
+    "terdaftar sebagai Desa Wisata pada Jadesta Kemenparekraf.",
   url: "https://girisuko.example.id",
   locale: "id-ID",
   address: {
-    street: "Kantor Kalurahan Girisuko, Padukuhan Bulu",
+    street: "Kompleks Balai Kalurahan Girisuko",
     region: "Kapanewon Panggang, Kabupaten Gunungkidul",
     province: "Daerah Istimewa Yogyakarta",
     postalCode: "55872",

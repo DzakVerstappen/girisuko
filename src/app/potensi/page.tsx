@@ -7,7 +7,7 @@ import { potensi } from "@/data/potensi";
 export const metadata: Metadata = {
   title: "Potensi Desa",
   description:
-    "Wisata alam dan budaya, produk UMKM, serta hasil pertanian dan peternakan unggulan Kalurahan Girisuko.",
+    "Desa Wisata Girisuko: Watu Payung, Bukit Roso Wulan, Stone Park, dan Telogo Moto Indro, ditambah UMKM peyek dan kerajinan tas Temuireng serta pertanian jagung/palawija.",
 };
 
 export default function PotensiPage() {
@@ -18,7 +18,7 @@ export default function PotensiPage() {
       <PageHero
         eyebrow="Ekonomi & Wisata"
         title="Potensi Kalurahan Girisuko"
-        description="Beragam kekayaan alam, budaya, dan produk warga yang menjadi penggerak ekonomi lokal serta daya tarik kunjungan."
+        description="Girisuko terdaftar sebagai Desa Wisata pada Jadesta Kemenparekraf. Bentang alam karst, produk UMKM warga, dan hasil pertanian menjadi penggerak ekonomi sekaligus daya tarik kunjungan."
         breadcrumbs={[{ label: "Potensi" }]}
       >
         <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-muted-foreground">
@@ -39,6 +39,10 @@ export default function PotensiPage() {
 
       <Container className="py-16 sm:py-20">
         <PotensiGrid items={potensi} />
+        <p className="mt-8 text-center text-xs text-muted-foreground">
+          Nama destinasi dan UMKM sesuai kondisi lapangan. Foto masih memakai
+          gambar contoh dan penempatan padukuhan bersifat indikatif.
+        </p>
       </Container>
     </>
   );

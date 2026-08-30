@@ -37,8 +37,10 @@ export function Hero() {
           Selamat Datang di Website Resmi {site.name}
         </h1>
         <p className="mt-5 max-w-xl text-lg text-white/85">
-          {site.tagline}. Temukan informasi pemerintahan, layanan publik, potensi
-          desa, dan transparansi anggaran dalam satu tempat.
+          {site.tagline}. Kalurahan di perbukitan karst Panggang yang berdiri
+          sejak {site.founded} dan kini menjadi Desa Wisata. Temukan informasi
+          pemerintahan, layanan publik, potensi, dan transparansi anggaran dalam
+          satu tempat.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">

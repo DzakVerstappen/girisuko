@@ -3,115 +3,128 @@ import type { Potensi } from "@/types";
 const img = (id: string) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1000&q=70`;
 
-/** Konten CONTOH untuk pengembangan frontend. */
+/**
+ * Potensi Kalurahan Girisuko. Nama objek sudah sesuai kondisi lapangan;
+ * foto masih memakai gambar contoh (stok) dan lokasi padukuhan bersifat
+ * indikatif — mohon sesuaikan dengan data resmi.
+ */
 export const potensi: Potensi[] = [
   {
-    slug: "bukit-panorama-girisuko",
-    nama: "Bukit Panorama Girisuko",
+    slug: "watu-payung",
+    nama: "Watu Payung",
     kategori: "Wisata",
     deskripsi:
-      "Spot matahari terbit dengan latar barisan perbukitan karst dan hamparan ladang. Dilengkapi gardu pandang dan area kemah sederhana yang dikelola pokdarwis.",
-    lokasi: "Padukuhan Wiloso",
+      "Gardu pandang dengan formasi batu menyerupai payung dan panorama lepas ke bentang perbukitan karst serta lembah Sungai Oyo. Populer untuk berburu foto dan menikmati senja.",
+    lokasi: "Padukuhan Turunan",
     gambar: img("photo-1464822759023-fed622ff2c3b"),
   },
   {
-    slug: "goa-sumber-air",
-    nama: "Goa & Sumber Mata Air Sendang",
+    slug: "bukit-roso-wulan",
+    nama: "Bukit Roso Wulan",
     kategori: "Wisata",
     deskripsi:
-      "Kawasan sumber air abadi yang menjadi tumpuan warga sekaligus tujuan wisata minat khusus dan edukasi konservasi air.",
-    lokasi: "Padukuhan Bacak",
+      "Puncak bukit untuk menikmati matahari terbit dan terbenam, hamparan awan pada pagi hari, serta area lapang untuk berkemah sederhana.",
+    lokasi: "Padukuhan Sanglor 2",
+    gambar: img("photo-1470071459604-3b5ec3a7fe05"),
+  },
+  {
+    slug: "stone-park",
+    nama: "Stone Park",
+    kategori: "Wisata",
+    deskripsi:
+      "Spot sunrise dengan latar bentang karst yang khas. Tersedia gardu pandang, spot foto batuan, dan warung kelola warga.",
+    lokasi: "Padukuhan Pacar 1",
+    gambar: img("photo-1501785888041-af3ef285b470"),
+  },
+  {
+    slug: "telogo-moto-indro",
+    nama: "Telogo Moto Indro",
+    kategori: "Wisata",
+    deskripsi:
+      "Telaga alami yang menjadi sumber air sekaligus ruang wisata santai dan edukasi konservasi air di kawasan karst.",
+    lokasi: "Padukuhan Sumber",
     gambar: img("photo-1502537362081-b571a8d4e5a3"),
   },
   {
-    slug: "desa-wisata-budaya",
-    nama: "Kampung Budaya Girisuko",
+    slug: "penginapan-kopi-panggang",
+    nama: "Penginapan & Kedai Kopi Panggang",
     kategori: "Wisata",
     deskripsi:
-      "Paket wisata belajar membatik, karawitan, dan kuliner tradisional bersama warga dengan homestay rumah joglo.",
-    lokasi: "Padukuhan Bulu",
-    gambar: img("photo-1528181304800-259b08848526"),
+      "Penginapan sekaligus kedai kopi dengan pemandangan perbukitan, menjadi titik singgah wisatawan yang berkeliling destinasi Girisuko.",
+    lokasi: "Padukuhan Gebang",
+    gambar: img("photo-1447933601403-0c6688de566e"),
   },
   {
-    slug: "keripik-singkong-mekar",
-    nama: "Keripik Singkong “Mekar Rasa”",
+    slug: "peyek-temuireng",
+    nama: "Industri Peyek Temuireng",
     kategori: "UMKM",
     deskripsi:
-      "Olahan singkong lokal aneka rasa yang dikelola kelompok perempuan. Sudah memiliki izin PIRT dan menembus pasar oleh-oleh Gunungkidul.",
-    lokasi: "Padukuhan Karangnongko",
+      "Sentra produksi peyek (rempeyek) rumahan yang dikelola warga, dipasarkan sebagai oleh-oleh khas dan pengisi warung di sekitar destinasi wisata.",
+    lokasi: "Padukuhan Temuireng 1",
     gambar: img("photo-1621939514649-280e2ee25f60"),
   },
   {
-    slug: "gula-semut-jawa",
-    nama: "Gula Semut Kelapa Organik",
+    slug: "kerajinan-tas-temuireng",
+    nama: "Kerajinan Tas Temuireng",
     kategori: "UMKM",
     deskripsi:
-      "Gula kelapa kristal tanpa bahan pengawet hasil penderes lokal, dikemas untuk pasar ritel dan ekspor skala kecil.",
-    lokasi: "Padukuhan Wiloso",
-    gambar: img("photo-1610725664285-7c57e6eeac3f"),
-  },
-  {
-    slug: "anyaman-bambu",
-    nama: "Kerajinan Anyaman Bambu",
-    kategori: "UMKM",
-    deskripsi:
-      "Besek, tampah, dan perabot dekoratif dari bambu apus. Menyerap tenaga kerja perajin di waktu luang antar-musim tani.",
-    lokasi: "Padukuhan Bacak",
+      "Perajin tas yang menyerap tenaga kerja warga di sela musim tani. Produk dijual untuk pasar lokal maupun pesanan dari luar daerah.",
+    lokasi: "Padukuhan Temuireng 2",
     gambar: img("photo-1595964185029-45b32d5a03f0"),
   },
   {
-    slug: "batik-tulis-girisuko",
-    nama: "Batik Tulis Motif Karst",
+    slug: "kwt-suko-dadi",
+    nama: "Kelompok Wanita Tani “Suko Dadi”",
     kategori: "UMKM",
     deskripsi:
-      "Batik dengan motif terinspirasi bentang alam karst dan tanaman lokal, diproduksi sanggar batik warga.",
-    lokasi: "Padukuhan Bulu",
-    gambar: img("photo-1583846783214-7229a91b20ed"),
-  },
-  {
-    slug: "padi-gogo-lahan-kering",
-    nama: "Padi Gogo Lahan Kering",
-    kategori: "Pertanian",
-    deskripsi:
-      "Varietas adaptif kekeringan yang jadi andalan pangan pokok. Dikembangkan bersama sekolah lapang kelompok tani.",
-    lokasi: "Hamparan selatan kalurahan",
-    gambar: img("photo-1574943320219-553eb213f72d"),
-  },
-  {
-    slug: "ternak-kambing-pe",
-    nama: "Ternak Kambing Peranakan Etawa",
-    kategori: "Pertanian",
-    deskripsi:
-      "Budidaya kambing PE untuk susu dan penggemukan, terintegrasi dengan pengolahan pupuk organik.",
-    lokasi: "Padukuhan Karangnongko",
-    gambar: img("photo-1524024973431-2ad916746881"),
-  },
-  {
-    slug: "kebun-empon-empon",
-    nama: "Kebun Empon-empon",
-    kategori: "Pertanian",
-    deskripsi:
-      "Jahe, kunyit, dan temulawak yang ditanam di pekarangan dan tegalan sebagai bahan baku jamu dan minuman herbal.",
-    lokasi: "Tersebar di seluruh padukuhan",
+      "Kelompok perempuan yang mengembangkan pekarangan pangan lestari dan mengolah hasil kebun menjadi produk bernilai tambah.",
+    lokasi: "Padukuhan Sumber",
     gambar: img("photo-1615485290382-441e4d049cb5"),
   },
   {
-    slug: "jathilan-turonggo",
-    nama: "Paguyuban Jathilan Turonggo Mudo",
-    kategori: "Budaya",
+    slug: "jagung-palawija",
+    nama: "Jagung & Palawija",
+    kategori: "Pertanian",
     deskripsi:
-      "Kesenian kuda lumping yang rutin pentas pada rasulan dan hajatan warga, dengan regenerasi penari usia sekolah.",
-    lokasi: "Padukuhan Bulu",
-    gambar: img("photo-1533174072545-7a4b6ad7a6c3"),
+      "Komoditas panen utama Girisuko. Lahan tegalan dan pekarangan didominasi tanaman jagung, diselingi kacang-kacangan dan ketela sesuai musim.",
+    lokasi: "Hamparan tegalan seluruh padukuhan",
+    gambar: img("photo-1500937386664-56d1dfef3854"),
   },
   {
-    slug: "gejog-lesung",
-    nama: "Karawitan & Gejog Lesung Ibu-ibu",
+    slug: "peternakan-warga",
+    nama: "Peternakan Sapi & Kambing",
+    kategori: "Pertanian",
+    deskripsi:
+      "Ternak sapi dan kambing menjadi tabungan hidup keluarga sekaligus sumber pupuk kandang untuk lahan kering. Dikelola secara individu maupun kelompok.",
+    lokasi: "Tersebar di 9 padukuhan",
+    gambar: img("photo-1524024973431-2ad916746881"),
+  },
+  {
+    slug: "hortikultura-pekarangan",
+    nama: "Hortikultura Pekarangan",
+    kategori: "Pertanian",
+    deskripsi:
+      "Pemanfaatan pekarangan untuk sayur, empon-empon, dan buah guna menopang gizi keluarga dan menambah pendapatan.",
+    lokasi: "Tersebar di seluruh padukuhan",
+    gambar: img("photo-1574943320219-553eb213f72d"),
+  },
+  {
+    slug: "tradisi-tilik-dusun",
+    nama: "Tradisi Tilik Dusun",
     kategori: "Budaya",
     deskripsi:
-      "Musik tradisional dari lesung penumbuk padi yang dilestarikan kelompok ibu-ibu sebagai atraksi wisata budaya.",
-    lokasi: "Padukuhan Wiloso",
-    gambar: img("photo-1471478331149-c72f17e33c73"),
+      "Agenda tahunan berupa kunjungan bergilir pemerintah kalurahan ke tiap padukuhan sebagai ajang silaturahmi, menyerap aspirasi warga, dan memperkuat gotong royong.",
+    lokasi: "Bergilir di 9 padukuhan",
+    gambar: img("photo-1516307365426-bea591f05011"),
+  },
+  {
+    slug: "seni-tradisional",
+    nama: "Seni Tradisional",
+    kategori: "Budaya",
+    deskripsi:
+      "Kelompok kesenian warga seperti jathilan dan karawitan yang tampil pada hajatan, peringatan hari besar, dan penyambutan tamu wisata.",
+    lokasi: "Tersebar di beberapa padukuhan",
+    gambar: img("photo-1533174072545-7a4b6ad7a6c3"),
   },
 ];
 

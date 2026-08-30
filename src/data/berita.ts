@@ -3,51 +3,66 @@ import type { Berita } from "@/types";
 const img = (id: string) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1280&q=70`;
 
-/** Konten CONTOH untuk pengembangan frontend. */
+/** Konten CONTOH untuk pengembangan frontend — narasi mengacu pada kondisi Girisuko. */
 export const berita: Berita[] = [
   {
-    slug: "musyawarah-kalurahan-rkp-2027",
-    judul: "Musyawarah Kalurahan Bahas Prioritas Pembangunan Tahun 2027",
+    slug: "musrenbangkal-prioritas-2027",
+    judul: "Musrenbangkal 2027: Jalan Usaha Tani, Air Bersih, dan Penataan Wisata Jadi Prioritas",
     ringkasan:
-      "Pemerintah Kalurahan Girisuko bersama BPK dan perwakilan warga menetapkan tiga prioritas utama pembangunan untuk tahun anggaran berikutnya.",
+      "Pemerintah Kalurahan Girisuko bersama BPK dan perwakilan 9 padukuhan menyepakati arah pembangunan tahun anggaran berikutnya.",
     konten: [
-      "Bertempat di Balai Kalurahan Girisuko, musyawarah kalurahan (Muskal) penyusunan Rencana Kerja Pemerintah Kalurahan Tahun 2027 dihadiri oleh Lurah, jajaran Pamong Kalurahan, anggota Badan Permusyawaratan Kalurahan (BPK), Ketua RT/RW, serta perwakilan kelompok perempuan dan pemuda.",
-      "Dari hasil pembahasan, disepakati tiga prioritas utama, yakni perbaikan jalan usaha tani di wilayah selatan, penguatan jaringan air bersih untuk tiga padukuhan, serta pengembangan kapasitas pelaku UMKM lokal.",
-      "Lurah Girisuko menekankan bahwa seluruh usulan akan dituangkan secara transparan dalam dokumen APBKal dan dapat dipantau warga melalui papan informasi maupun situs resmi kalurahan.",
+      "Musyawarah Perencanaan Pembangunan Kalurahan (Musrenbangkal) digelar di Balai Kalurahan Girisuko, dihadiri Lurah, Pamong Kalurahan, anggota Badan Permusyawaratan Kalurahan (BPK), para Dukuh, serta perwakilan kelompok perempuan dan pemuda dari sembilan padukuhan.",
+      "Tiga prioritas disepakati, yakni perbaikan jalan usaha tani untuk memperlancar angkutan hasil panen jagung dan palawija, penguatan jaringan air bersih di padukuhan yang rawan kekeringan pada musim kemarau, serta penataan akses dan fasilitas destinasi wisata Watu Payung dan Stone Park.",
+      "Lurah Girisuko menekankan seluruh usulan akan dituangkan secara transparan dalam APBKal dan dapat dipantau warga melalui papan informasi maupun situs resmi kalurahan.",
     ],
     kategori: "Pembangunan",
-    tanggal: "2026-08-18",
+    tanggal: "2026-08-20",
     penulis: "Admin Kalurahan",
     gambar: img("photo-1552664730-d307ca884978"),
     unggulan: true,
   },
   {
-    slug: "pelayanan-adminduk-keliling",
-    judul: "Pelayanan Administrasi Kependudukan Keliling Sasar Padukuhan Terjauh",
+    slug: "tilik-dusun-2026",
+    judul: "Tilik Dusun 2026 Dimulai, Pemerintah Kalurahan Sambangi 9 Padukuhan",
     ringkasan:
-      "Program jemput bola perekaman KTP-el dan pembaruan Kartu Keluarga menjangkau warga lansia dan penyandang disabilitas.",
+      "Kunjungan bergilir tahunan ini menjadi ajang silaturahmi sekaligus menyerap aspirasi warga secara langsung.",
     konten: [
-      "Kalurahan Girisuko bekerja sama dengan Dinas Kependudukan dan Pencatatan Sipil menggelar pelayanan administrasi kependudukan keliling selama tiga hari.",
-      "Layanan ini memprioritaskan warga lanjut usia, penyandang disabilitas, serta warga yang terkendala jarak menuju kantor kapanewon.",
-      "Warga cukup membawa dokumen pendukung seperti kartu keluarga lama dan surat pengantar RT. Petugas kalurahan membantu proses pengisian formulir di lokasi.",
+      "Tradisi Tilik Dusun kembali dijalankan Pemerintah Kalurahan Girisuko. Kegiatan ini berupa kunjungan bergilir ke tiap padukuhan — Sumber, Turunan, Sanglor 1, Sanglor 2, Pacar 1, Pacar 2, Temuireng 1, Temuireng 2, dan Gebang.",
+      "Dalam setiap kunjungan, Lurah dan Pamong berdialog dengan warga membahas usulan pembangunan, persoalan air, jalan, pertanian, hingga pengembangan wisata dan UMKM setempat.",
+      "Hasil serapan aspirasi Tilik Dusun menjadi salah satu bahan utama penyusunan rencana kerja dan anggaran kalurahan tahun berikutnya.",
     ],
-    kategori: "Pengumuman",
-    tanggal: "2026-08-11",
-    penulis: "Seksi Pelayanan Umum",
-    gambar: img("photo-1521791136064-7986c2920216"),
+    kategori: "Kegiatan",
+    tanggal: "2026-08-12",
+    penulis: "Admin Kalurahan",
+    gambar: img("photo-1533174072545-7a4b6ad7a6c3"),
   },
   {
-    slug: "panen-raya-kelompok-tani",
-    judul: "Panen Raya Kelompok Tani Ngudi Makmur, Produktivitas Naik 12 Persen",
+    slug: "girisuko-desa-wisata-jadesta",
+    judul: "Girisuko Terdaftar sebagai Desa Wisata di Jadesta Kemenparekraf",
     ringkasan:
-      "Penerapan pupuk organik dan pengaturan pola tanam mendorong kenaikan hasil panen padi gogo di lahan kering Girisuko.",
+      "Paket kunjungan bentang karst — Watu Payung, Bukit Roso Wulan, Stone Park, dan Telogo Moto Indro — didorong sebagai daya tarik utama.",
     konten: [
-      "Kelompok Tani Ngudi Makmur menggelar panen raya padi gogo di lahan seluas kurang lebih 8 hektare. Hasil ubinan menunjukkan kenaikan produktivitas sekitar 12 persen dibanding musim tanam sebelumnya.",
-      "Pendamping pertanian menyebut kombinasi pupuk organik, benih unggul lokal, dan pengaturan jarak tanam menjadi faktor utama peningkatan hasil.",
-      "Pemerintah kalurahan mendorong replikasi praktik ini ke kelompok tani lain melalui sekolah lapang yang difasilitasi anggaran ketahanan pangan.",
+      "Kalurahan Girisuko resmi tercatat sebagai Desa Wisata pada platform Jaringan Desa Wisata (Jadesta) Kementerian Pariwisata dan Ekonomi Kreatif.",
+      "Pengelolaan destinasi digerakkan Kelompok Sadar Wisata (Pokdarwis) bersama warga, mencakup spot matahari terbit Stone Park, gardu pandang Watu Payung, Bukit Roso Wulan, serta Telogo Moto Indro. Wisatawan dapat bermalam di penginapan dan menikmati sajian di Kedai Kopi Panggang.",
+      "Pemerintah kalurahan menyiapkan pembenahan papan penunjuk arah, area parkir, dan pelatihan pelayanan tamu bagi pengelola destinasi.",
     ],
     kategori: "Ekonomi",
-    tanggal: "2026-07-29",
+    tanggal: "2026-07-30",
+    penulis: "Pokdarwis Girisuko",
+    gambar: img("photo-1464822759023-fed622ff2c3b"),
+  },
+  {
+    slug: "panen-raya-jagung-palawija",
+    judul: "Panen Raya Jagung, Gapoktan Dorong Perbaikan Pascapanen",
+    ringkasan:
+      "Hasil panen jagung sebagai komoditas utama Girisuko mulai dipetik. Fokus berikutnya pada pengeringan dan mutu simpan.",
+    konten: [
+      "Kelompok tani dan Gabungan Kelompok Tani (Gapoktan) Girisuko menggelar panen raya jagung di lahan tegalan. Jagung merupakan komoditas panen utama kalurahan, diselingi kacang-kacangan dan ketela sesuai musim.",
+      "Pendamping pertanian mendorong perbaikan penanganan pascapanen, terutama pengeringan dan penyimpanan, agar mutu dan harga jual lebih baik.",
+      "Kelompok Wanita Tani “Suko Dadi” turut memanfaatkan hasil kebun untuk diolah menjadi produk bernilai tambah bersama pelaku UMKM setempat.",
+    ],
+    kategori: "Ekonomi",
+    tanggal: "2026-07-16",
     penulis: "Kontributor Warga",
     gambar: img("photo-1500937386664-56d1dfef3854"),
   },
@@ -55,46 +70,31 @@ export const berita: Berita[] = [
     slug: "posyandu-integrasi-layanan-primer",
     judul: "Posyandu Girisuko Terapkan Integrasi Layanan Primer",
     ringkasan:
-      "Enam pos layanan terpadu kini melayani seluruh siklus hidup, dari ibu hamil hingga lansia, dalam satu hari layanan.",
+      "Pos layanan terpadu kini melayani seluruh siklus hidup, dari ibu hamil hingga lansia, dalam satu hari layanan.",
     konten: [
-      "Seluruh posyandu di Kalurahan Girisuko mulai menerapkan pola Integrasi Layanan Primer (ILP). Dengan pola ini, pemeriksaan ibu hamil, balita, remaja, dewasa, dan lansia dilakukan pada hari layanan yang sama.",
-      "Kader kesehatan telah mengikuti pelatihan pengukuran antropometri dan penggunaan aplikasi pencatatan digital.",
-      "Kalurahan menyediakan insentif kader dan pengadaan alat ukur baru melalui anggaran bidang kesehatan.",
+      "Posyandu di padukuhan-padukuhan Kalurahan Girisuko mulai menerapkan pola Integrasi Layanan Primer (ILP). Dengan pola ini, pemeriksaan ibu hamil, balita, remaja, dewasa, dan lansia dilakukan pada hari layanan yang sama.",
+      "Kader kesehatan telah mengikuti pelatihan pengukuran antropometri dan pencatatan digital. Layanan didukung Puskesmas wilayah Kapanewon Panggang.",
+      "Kalurahan menyediakan insentif kader dan pengadaan alat ukur melalui anggaran bidang kesehatan.",
     ],
     kategori: "Kesehatan",
-    tanggal: "2026-07-15",
+    tanggal: "2026-07-02",
     penulis: "Seksi Kesejahteraan",
     gambar: img("photo-1576091160550-2173dba999ef"),
   },
   {
-    slug: "gotong-royong-talud-sungai",
-    judul: "Gotong Royong Warga Perkuat Talud Sungai Jelang Musim Hujan",
+    slug: "kerja-bakti-akses-destinasi",
+    judul: "Gotong Royong Warga Perbaiki Akses Jalan Menuju Destinasi Wisata",
     ringkasan:
-      "Ratusan warga dari empat padukuhan bahu-membahu memperkuat talud sepanjang 300 meter untuk mencegah longsor.",
+      "Warga Turunan dan Pacar 1 bahu-membahu memperbaiki jalan dan talud jelang musim hujan serta menyambut kunjungan wisata.",
     konten: [
-      "Menjelang musim hujan, warga empat padukuhan menggelar kerja bakti memperkuat talud sungai yang rawan tergerus air.",
-      "Material batu dan semen disediakan dari swadaya masyarakat dan bantuan anggaran penanggulangan bencana kalurahan.",
-      "Kegiatan ini juga menjadi sarana pemetaan titik-titik rawan bencana bersama relawan destana (desa tangguh bencana).",
+      "Ratusan warga menggelar kerja bakti memperbaiki ruas jalan dan memperkuat talud pada jalur menuju Watu Payung dan Stone Park.",
+      "Material sebagian berasal dari swadaya masyarakat dan bantuan anggaran kalurahan. Kegiatan sekaligus menjadi pemetaan titik rawan longsor bersama relawan penanggulangan bencana.",
+      "Gotong royong seperti ronda, kerja bakti, dan kegiatan posyandu masih menjadi kekuatan sosial warga Girisuko.",
     ],
     kategori: "Sosial",
-    tanggal: "2026-06-30",
+    tanggal: "2026-06-21",
     penulis: "Admin Kalurahan",
     gambar: img("photo-1469571486292-0ba58a3f068b"),
-  },
-  {
-    slug: "festival-budaya-rasulan",
-    judul: "Festival Rasulan Girisuko Angkat Tema Pelestarian Sumber Air",
-    ringkasan:
-      "Kirab budaya, pentas seni, dan bersih sumber menjadi rangkaian syukuran hasil bumi tahunan warga.",
-    konten: [
-      "Tradisi rasulan atau bersih dusun kembali digelar dengan rangkaian kirab gunungan hasil bumi, pentas jathilan, dan pagelaran wayang kulit semalam suntuk.",
-      "Tahun ini panitia mengangkat tema pelestarian sumber air, ditandai dengan aksi bersih mata air dan penanaman pohon di sekitar sumber.",
-      "Festival ini diharapkan memperkuat identitas budaya sekaligus menarik kunjungan wisata ke Girisuko.",
-    ],
-    kategori: "Kegiatan",
-    tanggal: "2026-06-12",
-    penulis: "Karang Taruna",
-    gambar: img("photo-1533174072545-7a4b6ad7a6c3"),
   },
 ];
 

@@ -58,27 +58,57 @@ export const pamong: Pamong[] = [
   },
   {
     nama: "Sukiman",
-    jabatan: "Dukuh Padukuhan Bulu",
+    jabatan: "Dukuh Padukuhan Sumber",
     kelompok: "Pelaksana Kewilayahan",
     foto: potret("photo-1519085360753-af0119f7cbe7"),
   },
   {
     nama: "Yohanes Tri Atmojo",
-    jabatan: "Dukuh Padukuhan Karangnongko",
+    jabatan: "Dukuh Padukuhan Turunan",
     kelompok: "Pelaksana Kewilayahan",
     foto: potret("photo-1506794778202-cad84cf45f1d"),
   },
   {
     nama: "Painem",
-    jabatan: "Dukuh Padukuhan Wiloso",
+    jabatan: "Dukuh Padukuhan Sanglor 1",
     kelompok: "Pelaksana Kewilayahan",
     foto: potret("photo-1517841905240-472988babdf9"),
   },
   {
     nama: "Slamet Riyadi",
-    jabatan: "Dukuh Padukuhan Bacak",
+    jabatan: "Dukuh Padukuhan Sanglor 2",
     kelompok: "Pelaksana Kewilayahan",
     foto: potret("photo-1633332755192-727a05c4013d"),
+  },
+  {
+    nama: "Mujiyana",
+    jabatan: "Dukuh Padukuhan Pacar 1",
+    kelompok: "Pelaksana Kewilayahan",
+    foto: potret("photo-1502685104226-ee32379fefbe"),
+  },
+  {
+    nama: "Sugeng Riyanto",
+    jabatan: "Dukuh Padukuhan Pacar 2",
+    kelompok: "Pelaksana Kewilayahan",
+    foto: potret("photo-1508214751196-bcfd4ca60f91"),
+  },
+  {
+    nama: "Tukiran",
+    jabatan: "Dukuh Padukuhan Temuireng 1",
+    kelompok: "Pelaksana Kewilayahan",
+    foto: potret("photo-1519345182560-3f2917c472ef"),
+  },
+  {
+    nama: "Warsini",
+    jabatan: "Dukuh Padukuhan Temuireng 2",
+    kelompok: "Pelaksana Kewilayahan",
+    foto: potret("photo-1500835556837-99ac94a94552"),
+  },
+  {
+    nama: "Ngadiman",
+    jabatan: "Dukuh Padukuhan Gebang",
+    kelompok: "Pelaksana Kewilayahan",
+    foto: potret("photo-1547425260-76bcadfb4f2c"),
   },
 ];
 
@@ -114,15 +144,21 @@ export const lembaga = [
     jumlah: "Pengurus inti + perwakilan padukuhan",
   },
   {
-    nama: "Kelompok Tani & Gapoktan",
+    nama: "Kelompok Tani, Gapoktan & Kelompok Wanita Tani “Suko Dadi”",
     peran:
-      "Koordinasi usaha tani, distribusi sarana produksi, dan penguatan ketahanan pangan.",
-    jumlah: "6 kelompok tani",
+      "Koordinasi usaha tani jagung dan palawija, distribusi sarana produksi, pengembangan pekarangan pangan lestari, dan penguatan ketahanan pangan.",
+    jumlah: "Tersebar di 9 padukuhan",
+  },
+  {
+    nama: "Pokdarwis (Kelompok Sadar Wisata)",
+    peran:
+      "Mengelola dan mengembangkan destinasi Watu Payung, Bukit Roso Wulan, Stone Park, dan Telogo Moto Indro sebagai bagian dari Desa Wisata Girisuko.",
+    jumlah: "Pengurus + anggota per destinasi",
   },
   {
     nama: "Relawan Destana / FPRB",
     peran:
-      "Kesiapsiagaan dan penanggulangan bencana berbasis masyarakat.",
-    jumlah: "30 relawan terlatih",
+      "Kesiapsiagaan dan penanggulangan bencana berbasis masyarakat di kawasan perbukitan karst.",
+    jumlah: "Relawan terlatih tingkat kalurahan",
   },
 ];

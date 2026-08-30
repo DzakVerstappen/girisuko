@@ -1,12 +1,21 @@
 # Website Kalurahan Girisuko — Frontend
 
 Website profil dan layanan **Kalurahan Girisuko**, Kapanewon Panggang, Kabupaten
-Gunungkidul, D.I. Yogyakarta. Tahap ini **fokus frontend saja** — semua konten
-memakai data contoh (mock) di folder [`src/data`](src/data) dan belum terhubung
-ke backend/CMS.
+Gunungkidul, D.I. Yogyakarta. Tahap ini **fokus frontend saja** — konten dikelola
+lewat data di folder [`src/data`](src/data) dan belum terhubung ke backend/CMS.
 
-> ⚠️ Seluruh nama, foto, angka statistik, APBKal, dan artikel adalah **contoh**
-> untuk pengembangan tampilan. Verifikasi dengan data resmi sebelum publikasi.
+> ℹ️ **Yang sudah faktual:** identitas kalurahan (hari jadi 15 Agustus 1944,
+> ± 5.500 jiwa, 9 padukuhan: Sumber, Turunan, Sanglor 1 & 2, Pacar 1 & 2,
+> Temuireng 1 & 2, Gebang), kondisi geografis karst & curah hujan ± 1.382
+> mm/tahun, status Desa Wisata (Jadesta Kemenparekraf), destinasi (Watu Payung,
+> Bukit Roso Wulan, Stone Park, Telogo Moto Indro, Kopi Panggang), UMKM (peyek &
+> tas Temuireng, KWT "Suko Dadi"), pertanian jagung/palawija, tradisi Tilik Dusun,
+> dan daftar fasilitas pendidikan.
+>
+> ⚠️ **Masih placeholder** (ganti sebelum publikasi): nama & foto pamong, foto
+> semua halaman (stok Unsplash), nomor telepon/email, rincian angka per kelompok
+> (umur, pendidikan, pekerjaan), seluruh angka APBKal, penempatan padukuhan tiap
+> potensi, dan isi artikel berita.
 
 ## Teknologi
 

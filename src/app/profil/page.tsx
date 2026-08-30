@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import {
+  Building2,
+  CalendarDays,
+  CloudRain,
   Compass,
+  GraduationCap,
+  MapPinned,
   Mountain,
-  Sprout,
+  Sparkles,
   Target,
   TreePine,
   Users,
@@ -18,6 +23,7 @@ import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { padukuhan } from "@/data/padukuhan";
+import { site } from "@/data/site";
 import {
   kelompokUmur,
   mataPencaharian,
@@ -29,7 +35,7 @@ import {
 export const metadata: Metadata = {
   title: "Profil Kalurahan",
   description:
-    "Sejarah, visi misi, kondisi geografis, dan data demografi Kalurahan Girisuko, Panggang, Gunungkidul.",
+    "Sejarah, visi misi, kondisi geografis, data demografi, dan fasilitas Kalurahan Girisuko, Kapanewon Panggang, Gunungkidul.",
 };
 
 const visi =
@@ -37,24 +43,42 @@ const visi =
 
 const misi = [
   "Meningkatkan kualitas pelayanan publik yang cepat, transparan, dan akuntabel.",
-  "Menguatkan ketahanan pangan dan ekonomi warga melalui pertanian lahan kering dan UMKM.",
-  "Melestarikan sumber daya air, lingkungan, dan kearifan budaya lokal.",
-  "Mengembangkan pariwisata berbasis masyarakat yang berkelanjutan.",
-  "Memperkuat gotong royong dan kapasitas kelembagaan masyarakat.",
+  "Menguatkan ketahanan pangan dan ekonomi warga melalui pertanian jagung/palawija, peternakan, dan UMKM.",
+  "Melestarikan sumber daya air, lingkungan karst, dan kearifan budaya lokal.",
+  "Mengembangkan pariwisata berbasis masyarakat yang berkelanjutan sebagai Desa Wisata.",
+  "Memperkuat gotong royong dan kelembagaan warga, antara lain melalui tradisi Tilik Dusun.",
+];
+
+const fakta = [
+  { label: "Hari jadi", value: site.founded, icon: CalendarDays },
+  { label: "Jumlah penduduk", value: "± 5.500 jiwa", icon: Users },
+  { label: "Padukuhan", value: `${s.jumlahPadukuhan} padukuhan`, icon: Compass },
+  { label: "Status", value: "Desa Wisata (Jadesta Kemenparekraf)", icon: Sparkles },
 ];
 
 const geografis = [
   { label: "Luas wilayah", value: `± ${s.luasWilayahKm2} km²`, icon: Mountain },
   { label: "Jumlah padukuhan", value: `${s.jumlahPadukuhan} padukuhan`, icon: Compass },
-  { label: "Topografi", value: "Perbukitan karst & lahan kering", icon: TreePine },
-  { label: "Ketinggian", value: "± 150–350 mdpl", icon: Sprout },
+  {
+    label: "Topografi",
+    value: "Perbukitan karst selatan Gunungkidul",
+    icon: TreePine,
+  },
+  {
+    label: "Curah hujan rata-rata",
+    value: `± ${s.curahHujanMmTahun.toLocaleString("id-ID")} mm/tahun`,
+    icon: CloudRain,
+  },
 ];
 
-const batas = [
-  { arah: "Utara", wilayah: "Kalurahan Giriharjo" },
-  { arah: "Timur", wilayah: "Kalurahan Girikarto" },
-  { arah: "Selatan", wilayah: "Samudra Hindia" },
-  { arah: "Barat", wilayah: "Kalurahan Giripurwo" },
+const fasilitas = [
+  { nama: "Balai Kalurahan", jumlah: "1 unit" },
+  { nama: "Balai Padukuhan", jumlah: `${s.jumlahPadukuhan} unit` },
+  { nama: "Puskesmas / layanan kesehatan", jumlah: "Tersedia" },
+  { nama: "Taman Kanak-kanak (TK)", jumlah: "7 unit" },
+  { nama: "PAUD", jumlah: "6 unit" },
+  { nama: "Sekolah Dasar (SD)", jumlah: "6 unit" },
+  { nama: "Sekolah Menengah Pertama (SMP)", jumlah: "2 unit" },
 ];
 
 export default function ProfilPage() {
@@ -63,9 +87,24 @@ export default function ProfilPage() {
       <PageHero
         eyebrow="Tentang Kami"
         title="Profil Kalurahan Girisuko"
-        description="Mengenal lebih dekat sejarah, wilayah, dan masyarakat Girisuko di Kapanewon Panggang, Kabupaten Gunungkidul."
+        description="Mengenal lebih dekat sejarah, wilayah, dan masyarakat Girisuko di Kapanewon Panggang, Kabupaten Gunungkidul, D.I. Yogyakarta."
         breadcrumbs={[{ label: "Profil" }]}
-      />
+      >
+        <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {fakta.map((f) => (
+            <div
+              key={f.label}
+              className="rounded-xl border border-border bg-background/60 p-4"
+            >
+              <f.icon className="size-5 text-primary" />
+              <dt className="mt-2 text-xs uppercase tracking-wider text-muted-foreground">
+                {f.label}
+              </dt>
+              <dd className="font-display font-bold leading-tight">{f.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </PageHero>
 
       <Container className="py-16 sm:py-20">
         {/* Sejarah */}
@@ -76,21 +115,23 @@ export default function ProfilPage() {
               Nama <strong className="text-foreground">Girisuko</strong> berasal
               dari kata <em>giri</em> yang berarti gunung atau bukit, dan{" "}
               <em>suko</em> (suka) yang bermakna kegembiraan — harapan akan
-              kehidupan yang bahagia di tanah perbukitan. Wilayah ini tumbuh dari
-              beberapa padukuhan permukiman lama yang tersebar mengikuti sumber
-              air dan lahan garapan.
+              kehidupan yang bahagia di tanah perbukitan. Kalurahan ini
+              diperingati berdiri pada{" "}
+              <strong className="text-foreground">{site.founded}</strong> dan
+              berkembang dari padukuhan-padukuhan permukiman lama yang tersebar
+              mengikuti sumber air dan lahan garapan di kawasan karst Gunungkidul
+              selatan.
             </p>
             <p>
-              Sejak diberlakukannya Undang-Undang Keistimewaan Daerah Istimewa
-              Yogyakarta, sebutan desa berubah menjadi{" "}
+              Sejak berlakunya Undang-Undang Keistimewaan Daerah Istimewa
+              Yogyakarta, sebutan desa menjadi{" "}
               <strong className="text-foreground">kalurahan</strong> dan kepala
-              desa menjadi <strong className="text-foreground">lurah</strong>,
-              dengan perangkat yang disebut pamong kalurahan. Struktur ini
-              menegaskan kembali akar budaya pemerintahan tradisional Yogyakarta.
-              <span className="mt-3 block text-sm italic">
-                Catatan: uraian sejarah di atas adalah contoh untuk pengembangan
-                situs dan perlu diverifikasi dengan dokumen resmi kalurahan.
-              </span>
+              desa menjadi <strong className="text-foreground">lurah</strong>{" "}
+              dengan perangkat yang disebut pamong kalurahan. Kini Girisuko juga
+              tercatat sebagai <strong className="text-foreground">Desa Wisata</strong>{" "}
+              pada Jadesta Kemenparekraf, dengan andalan bentang alam karst dan
+              kekuatan gotong royong warga yang antara lain dirawat lewat tradisi
+              tahunan <em>Tilik Dusun</em>.
             </p>
           </div>
         </section>
@@ -119,13 +160,18 @@ export default function ProfilPage() {
               </ol>
             </Card>
           </div>
+          <p className="mt-4 text-xs italic text-muted-foreground">
+            Rumusan visi dan misi di atas bersifat ringkas untuk tampilan situs;
+            rujukan resmi mengikuti dokumen RPJM Kalurahan.
+          </p>
         </section>
 
         {/* Geografis */}
         <section id="geografis" className="mt-16 scroll-mt-24">
           <SectionHeading
             eyebrow="Kondisi Geografis"
-            title="Wilayah & Batas Administratif"
+            title="Wilayah & Lingkungan"
+            description="Girisuko berada di kawasan perbukitan karst Gunungkidul selatan dengan kemiringan lahan yang bervariasi."
           />
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {geografis.map((g) => (
@@ -136,13 +182,41 @@ export default function ProfilPage() {
               </Card>
             ))}
           </div>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {batas.map((b) => (
-              <Card key={b.arah} className="p-5">
-                <p className="text-xs font-semibold uppercase tracking-wider text-primary">
-                  Sebelah {b.arah}
-                </p>
-                <p className="mt-1 font-medium">{b.wilayah}</p>
+          <Card className="mt-4 flex items-start gap-3 p-5">
+            <MapPinned className="mt-0.5 size-5 shrink-0 text-primary" />
+            <p className="text-sm text-muted-foreground">
+              <strong className="text-foreground">Batas wilayah.</strong>{" "}
+              Kalurahan Girisuko berbatasan dengan kalurahan lain di Kapanewon
+              Panggang dan sekitarnya. Rincian batas administratif per arah mata
+              angin menyesuaikan data resmi kalurahan.
+            </p>
+          </Card>
+        </section>
+
+        {/* Fasilitas */}
+        <section id="fasilitas" className="mt-16 scroll-mt-24">
+          <SectionHeading
+            eyebrow="Sarana & Prasarana"
+            title="Fasilitas Umum & Pendidikan"
+          />
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {fasilitas.map((f) => (
+              <Card key={f.nama} className="flex items-center gap-3 p-4">
+                <span className="grid size-10 shrink-0 place-items-center rounded-lg bg-accent text-accent-foreground">
+                  {f.nama.includes("Balai") ? (
+                    <Building2 className="size-5" />
+                  ) : (
+                    <GraduationCap className="size-5" />
+                  )}
+                </span>
+                <span>
+                  <span className="block text-sm font-semibold leading-tight">
+                    {f.nama}
+                  </span>
+                  <span className="text-xs text-muted-foreground">
+                    {f.jumlah}
+                  </span>
+                </span>
               </Card>
             ))}
           </div>
@@ -153,7 +227,7 @@ export default function ProfilPage() {
           <SectionHeading
             eyebrow="Data Demografi"
             title="Kependudukan Girisuko"
-            description="Seluruh angka pada bagian ini bersifat ilustratif untuk pengembangan frontend."
+            description="Total penduduk ± 5.500 jiwa. Rincian per kelompok merupakan perkiraan proporsional dan disesuaikan dengan pemutakhiran data resmi."
           />
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -227,15 +301,14 @@ export default function ProfilPage() {
         <section id="padukuhan" className="mt-16 scroll-mt-24">
           <SectionHeading
             eyebrow="Wilayah"
-            title={`Daftar ${padukuhan.length} Padukuhan`}
-            description="Nama padukuhan dan angka di bawah ini merupakan contoh dan perlu diverifikasi."
+            title={`${padukuhan.length} Padukuhan di Girisuko`}
+            description="Nama padukuhan sudah sesuai. Angka KK dan jiwa merupakan perkiraan proporsional dari total ± 5.500 jiwa dan perlu dimutakhirkan."
           />
           <div className="mt-6 overflow-x-auto rounded-xl border border-border">
-            <table className="w-full min-w-[520px] text-left text-sm">
+            <table className="w-full min-w-[420px] text-left text-sm">
               <thead className="bg-muted text-muted-foreground">
                 <tr>
                   <th className="px-4 py-3 font-semibold">Padukuhan</th>
-                  <th className="px-4 py-3 font-semibold">Dukuh</th>
                   <th className="px-4 py-3 font-semibold text-right">KK</th>
                   <th className="px-4 py-3 font-semibold text-right">Jiwa</th>
                 </tr>
@@ -244,7 +317,6 @@ export default function ProfilPage() {
                 {padukuhan.map((p) => (
                   <tr key={p.nama} className="hover:bg-muted/50">
                     <td className="px-4 py-3 font-medium">{p.nama}</td>
-                    <td className="px-4 py-3 text-muted-foreground">{p.dukuh}</td>
                     <td className="px-4 py-3 text-right tabular-nums">
                       {p.kk.toLocaleString("id-ID")}
                     </td>
@@ -256,9 +328,7 @@ export default function ProfilPage() {
               </tbody>
               <tfoot className="border-t-2 border-border bg-muted/60 font-semibold">
                 <tr>
-                  <td className="px-4 py-3" colSpan={2}>
-                    Total
-                  </td>
+                  <td className="px-4 py-3">Total</td>
                   <td className="px-4 py-3 text-right tabular-nums">
                     {padukuhan
                       .reduce((a, b) => a + b.kk, 0)
