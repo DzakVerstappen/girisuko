@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "Telogo Moto Indro",
     "Kopi Panggang",
     "pemerintah kalurahan",
-    "layanan publik desa",
+    "profil desa",
   ],
   authors: [{ name: site.name }],
   openGraph: {

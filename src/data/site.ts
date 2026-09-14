@@ -19,9 +19,9 @@ export const site = {
   jadestaUrl: "https://jadesta.kemenparekraf.go.id",
   description:
     "Website resmi Kalurahan Girisuko, Kapanewon Panggang, Kabupaten Gunungkidul, " +
-    "Daerah Istimewa Yogyakarta. Informasi pemerintahan, layanan publik, potensi " +
-    "wisata karst, ekonomi warga, dan transparansi anggaran kalurahan. Girisuko " +
-    "terdaftar sebagai Desa Wisata pada Jadesta Kemenparekraf.",
+    "Daerah Istimewa Yogyakarta. Profil kalurahan, kabar terbaru, serta potensi " +
+    "wisata karst dan ekonomi warga. Girisuko terdaftar sebagai Desa Wisata pada " +
+    "Jadesta Kemenparekraf.",
   url: "https://girisuko.example.id",
   locale: "id-ID",
   address: {
@@ -72,15 +72,10 @@ export const mainNav: NavItem[] = [
     children: [
       { label: "Struktur Organisasi", href: "/pemerintahan#struktur" },
       { label: "Pamong Kalurahan", href: "/pemerintahan#pamong" },
-      { label: "Badan Permusyawaratan (BPK)", href: "/pemerintahan#bpk" },
-      { label: "Lembaga Kemasyarakatan", href: "/pemerintahan#lembaga" },
     ],
   },
   { label: "Berita", href: "/berita" },
-  { label: "Layanan", href: "/layanan" },
   { label: "Potensi", href: "/potensi" },
-  { label: "APBKal", href: "/apbdes" },
-  { label: "Galeri", href: "/galeri" },
   { label: "Kontak", href: "/kontak" },
 ];
 
@@ -91,15 +86,15 @@ export const footerNav = [
       { label: "Profil Kalurahan", href: "/profil" },
       { label: "Pemerintahan", href: "/pemerintahan" },
       { label: "Berita & Pengumuman", href: "/berita" },
-      { label: "Galeri", href: "/galeri" },
+      { label: "Potensi Desa", href: "/potensi" },
     ],
   },
   {
-    title: "Layanan",
+    title: "Informasi",
     links: [
-      { label: "Layanan Administrasi", href: "/layanan" },
-      { label: "Potensi Desa", href: "/potensi" },
-      { label: "Transparansi APBKal", href: "/apbdes" },
+      { label: "Sejarah & Visi Misi", href: "/profil#sejarah" },
+      { label: "Data Demografi", href: "/profil#demografi" },
+      { label: "Daftar Padukuhan", href: "/profil#padukuhan" },
       { label: "Hubungi Kami", href: "/kontak" },
     ],
   },

@@ -13,16 +13,3 @@ export function formatTanggal(iso: string) {
   });
 }
 
-export function formatRupiah(nilai: number) {
-  return new Intl.NumberFormat("id-ID", {
-    style: "currency",
-    currency: "IDR",
-    maximumFractionDigits: 0,
-  }).format(nilai);
-}
-
-export function formatRupiahSingkat(nilai: number) {
-  if (nilai >= 1_000_000_000) return `Rp ${(nilai / 1_000_000_000).toFixed(2)} M`;
-  if (nilai >= 1_000_000) return `Rp ${(nilai / 1_000_000).toFixed(1)} Jt`;
-  return formatRupiah(nilai);
-}

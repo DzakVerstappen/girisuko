@@ -15,7 +15,6 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { formatRupiahSingkat } from "@/lib/utils";
 
 const SERIES = [
   "var(--primary)",
@@ -152,64 +151,6 @@ export function KategoriPieChart({
           align="right"
           verticalAlign="middle"
         />
-      </PieChart>
-    </ResponsiveContainer>
-  );
-}
-
-export function AnggaranBarChart({
-  data,
-}: {
-  data: { tahun: string; Pendapatan: number; Belanja: number }[];
-}) {
-  return (
-    <ResponsiveContainer width="100%" height={300}>
-      <BarChart data={data} margin={{ left: 8, right: 8, top: 8 }} barGap={6}>
-        <CartesianGrid stroke="var(--border)" strokeDasharray="3 3" vertical={false} />
-        <XAxis dataKey="tahun" tick={axisTick} tickLine={false} axisLine={false} />
-        <YAxis
-          tick={axisTick}
-          tickLine={false}
-          axisLine={false}
-          width={72}
-          tickFormatter={(v) => formatRupiahSingkat(Number(v)).replace("Rp ", "")}
-        />
-        <Tooltip
-          content={<TooltipBox formatter={formatRupiahSingkat} />}
-          cursor={{ fill: "var(--muted)" }}
-        />
-        <Legend wrapperStyle={{ fontSize: 12, paddingTop: 8 }} />
-        <Bar dataKey="Pendapatan" fill="var(--primary)" radius={[4, 4, 0, 0]} />
-        <Bar dataKey="Belanja" fill="var(--secondary)" radius={[4, 4, 0, 0]} />
-      </BarChart>
-    </ResponsiveContainer>
-  );
-}
-
-export function AnggaranDonut({
-  data,
-}: {
-  data: { nama: string; nilai: number }[];
-}) {
-  return (
-    <ResponsiveContainer width="100%" height={320}>
-      <PieChart>
-        <Pie
-          data={data}
-          dataKey="nilai"
-          nameKey="nama"
-          innerRadius={60}
-          outerRadius={105}
-          paddingAngle={2}
-          stroke="var(--card)"
-          strokeWidth={2}
-        >
-          {data.map((_, i) => (
-            <Cell key={i} fill={SERIES[i % SERIES.length]} />
-          ))}
-        </Pie>
-        <Tooltip content={<TooltipBox formatter={formatRupiahSingkat} />} />
-        <Legend wrapperStyle={{ fontSize: 11 }} />
       </PieChart>
     </ResponsiveContainer>
   );

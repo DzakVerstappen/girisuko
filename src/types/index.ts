@@ -18,21 +18,10 @@ export type Berita = {
   unggulan?: boolean;
 };
 
-export type Layanan = {
-  slug: string;
-  nama: string;
-  ringkasan: string;
-  kategori: "Kependudukan" | "Surat Keterangan" | "Pertanahan" | "Usaha";
-  syarat: string[];
-  alur: string[];
-  waktu: string;
-  biaya: string;
-};
-
 export type Pamong = {
   nama: string;
   jabatan: string;
-  kelompok: "Pimpinan" | "Pelaksana Teknis" | "Pelaksana Kewilayahan";
+  kelompok: "Pimpinan" | "Pelaksana Kewilayahan";
   foto: string;
 };
 
@@ -45,29 +34,9 @@ export type Potensi = {
   gambar: string;
 };
 
-export type ItemGaleri = {
-  id: string;
-  judul: string;
-  kategori: "Kegiatan" | "Pembangunan" | "Alam" | "Budaya";
-  gambar: string;
-};
-
 export type Padukuhan = {
   nama: string;
   dukuh: string;
   kk: number;
   jiwa: number;
-};
-
-export type Agenda = {
-  judul: string;
-  tanggal: string;
-  waktu: string;
-  lokasi: string;
-};
-
-export type AnggaranTahun = {
-  tahun: number;
-  pendapatan: { nama: string; nilai: number }[];
-  belanja: { nama: string; nilai: number }[];
 };

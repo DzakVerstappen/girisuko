@@ -1,6 +1,6 @@
 # Website Kalurahan Girisuko — Frontend
 
-Website profil dan layanan **Kalurahan Girisuko**, Kapanewon Panggang, Kabupaten
+Website profil **Kalurahan Girisuko**, Kapanewon Panggang, Kabupaten
 Gunungkidul, D.I. Yogyakarta. Tahap ini **fokus frontend saja** — konten dikelola
 lewat data di folder [`src/data`](src/data) dan belum terhubung ke backend/CMS.
 
@@ -14,8 +14,8 @@ lewat data di folder [`src/data`](src/data) dan belum terhubung ke backend/CMS.
 >
 > ⚠️ **Masih placeholder** (ganti sebelum publikasi): nama & foto pamong, foto
 > semua halaman (stok Unsplash), nomor telepon/email, rincian angka per kelompok
-> (umur, pendidikan, pekerjaan), seluruh angka APBKal, penempatan padukuhan tiap
-> potensi, dan isi artikel berita.
+> (umur, pendidikan, pekerjaan), penempatan padukuhan tiap potensi, dan isi
+> artikel berita.
 
 ## Teknologi
 
@@ -23,7 +23,7 @@ lewat data di folder [`src/data`](src/data) dan belum terhubung ke backend/CMS.
 | ----------- | --------------------------------------------------- |
 | Framework   | Next.js 16 (App Router) + React 19 + TypeScript     |
 | Styling     | Tailwind CSS v4 (token warna via CSS variables)     |
-| Komponen    | Primitif buatan sendiri + Radix (Dialog, Accordion) |
+| Komponen    | Primitif buatan sendiri + Radix (Dialog)            |
 | Ikon        | lucide-react                                        |
 | Animasi     | motion (framer-motion) — hormati `prefers-reduced-motion` |
 | Grafik      | recharts                                            |
@@ -56,23 +56,20 @@ src/
 │  ├─ layout.tsx            # Root layout, font, metadata, JSON-LD, header/footer
 │  ├─ page.tsx              # Beranda (komposisi section di components/home)
 │  ├─ profil/               # Sejarah, visi misi, geografis, demografi, padukuhan
-│  ├─ pemerintahan/         # Struktur organisasi, pamong, BPK, lembaga
+│  ├─ pemerintahan/         # Struktur organisasi + pamong kalurahan
 │  ├─ berita/               # Daftar berita + filter/pencarian
 │  │  └─ [slug]/            # Detail artikel (generateStaticParams + metadata)
-│  ├─ layanan/              # Layanan administrasi (accordion syarat & alur)
 │  ├─ potensi/              # Wisata, UMKM, pertanian, budaya + filter
-│  ├─ apbdes/               # Transparansi APBKal (grafik + tabel per tahun)
-│  ├─ galeri/               # Galeri masonry + lightbox
 │  ├─ kontak/               # Info kontak, jam layanan, peta, form
 │  ├─ loading.tsx, not-found.tsx, sitemap.ts, robots.ts
 │  └─ globals.css           # Token warna, font, keyframes, utilitas
 ├─ components/
-│  ├─ ui/                   # Primitif: button, card, badge, accordion, field, ...
+│  ├─ ui/                   # Primitif: button, card, badge, field, ...
 │  ├─ home/                 # Section khusus beranda
 │  ├─ site-header.tsx, site-footer.tsx, brand.tsx
 │  ├─ charts.tsx            # Wrapper recharts (client)
-│  └─ ...                   # news-card, official-card, gallery, contact-form, dst.
-├─ data/                    # SEMUA konten contoh (ganti di sini)
+│  └─ ...                   # news-card, official-card, contact-form, dst.
+├─ data/                    # SEMUA konten (ganti di sini)
 └─ types/                   # Tipe TypeScript bersama
 ```
 
@@ -82,12 +79,9 @@ src/
 | ---------------------------- | ----------------------------------- |
 | Nama, alamat, kontak, menu   | `src/data/site.ts`                  |
 | Berita / pengumuman          | `src/data/berita.ts`               |
-| Layanan (syarat, alur)       | `src/data/layanan.ts`              |
-| Pamong & lembaga             | `src/data/pamong.ts`               |
+| Pamong kalurahan             | `src/data/pamong.ts`               |
 | Potensi desa                 | `src/data/potensi.ts`             |
-| APBKal                       | `src/data/apbdes.ts`               |
 | Statistik & grafik           | `src/data/statistik.ts`           |
-| Galeri                       | `src/data/galeri.ts`              |
 | Padukuhan                    | `src/data/padukuhan.ts`           |
 | Agenda kegiatan              | `src/data/agenda.ts`              |
 
@@ -109,6 +103,6 @@ di [`next.config.ts`](next.config.ts). Untuk konten final, simpan aset di
 ## Yang belum dikerjakan (menunggu backend)
 
 - Pengiriman form kontak (kini hanya validasi sisi klien + notifikasi demo).
-- Tombol unduh formulir layanan dan tombol berbagi artikel.
+- Tombol berbagi artikel.
 - Pencarian & data dinamis dari CMS.
 - Embed peta resmi (kini memakai OpenStreetMap perkiraan).

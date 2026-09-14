@@ -6,13 +6,13 @@
  * Token warna — ubah nilai di sini untuk mengganti identitas visual  *
  * ------------------------------------------------------------------ */
 :root {
-  --background: #f7faf8;
+  --background: #e7f2ec;
   --foreground: #14231c;
 
   --card: #ffffff;
   --card-foreground: #14231c;
 
-  --muted: #eef3f0;
+  --muted: #31a357;
   --muted-foreground: #566a61;
 
   --primary: #1f7a4d;
@@ -25,7 +25,7 @@
   --accent-foreground: #17593a;
 
   --border: #dde6e1;
-  --input: #dde6e1;
+  --input: #31a357;
   --ring: #1f7a4d;
 
   --radius: 0.9rem;

@@ -2,33 +2,32 @@ import type { Metadata } from "next";
 import { OfficialCard } from "@/components/official-card";
 import { PageHero } from "@/components/page-hero";
 import { ScrollReveal } from "@/components/scroll-reveal";
-import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { kelompokPamong, lembaga, pamong } from "@/data/pamong";
+import { kelompokPamong, pamong } from "@/data/pamong";
 
 export const metadata: Metadata = {
   title: "Pemerintahan",
   description:
-    "Struktur organisasi, pamong kalurahan, Badan Permusyawaratan Kalurahan (BPK), dan lembaga kemasyarakatan Kalurahan Girisuko.",
+    "Struktur organisasi dan susunan pamong Kalurahan Girisuko, Kapanewon Panggang, Gunungkidul.",
 };
 
 const labelKelompok: Record<string, string> = {
   Pimpinan: "Pimpinan Kalurahan",
-  "Pelaksana Teknis": "Pelaksana Teknis",
   "Pelaksana Kewilayahan": "Pelaksana Kewilayahan (Dukuh)",
 };
 
 export default function PemerintahanPage() {
   const lurah = pamong.find((p) => p.jabatan === "Lurah");
   const carik = pamong.find((p) => p.jabatan.startsWith("Carik"));
+  const dukuh = pamong.filter((p) => p.kelompok === "Pelaksana Kewilayahan");
 
   return (
     <>
       <PageHero
         eyebrow="Organisasi"
         title="Pemerintah Kalurahan"
-        description="Susunan pamong kalurahan dan lembaga yang bekerja melayani warga Girisuko."
+        description="Susunan pamong kalurahan yang bekerja melayani warga Girisuko."
         breadcrumbs={[{ label: "Pemerintahan" }]}
       />
 
@@ -52,18 +51,16 @@ export default function PemerintahanPage() {
               <p className="font-display font-bold">{carik?.nama}</p>
             </div>
             <div className="h-6 w-px bg-border" />
-            <div className="grid w-full gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {pamong
-                .filter((p) => p.kelompok === "Pelaksana Teknis")
-                .map((p) => (
-                  <div
-                    key={p.jabatan}
-                    className="rounded-xl border border-border bg-card p-3 text-center text-sm shadow-sm"
-                  >
-                    <p className="font-semibold leading-tight">{p.jabatan}</p>
-                    <p className="mt-1 text-xs text-muted-foreground">{p.nama}</p>
-                  </div>
-                ))}
+            <div className="grid w-full gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {dukuh.map((p) => (
+                <div
+                  key={p.jabatan}
+                  className="rounded-xl border border-border bg-card p-3 text-center text-sm shadow-sm"
+                >
+                  <p className="font-semibold leading-tight">{p.jabatan}</p>
+                  <p className="mt-1 text-xs text-muted-foreground">{p.nama}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -89,28 +86,6 @@ export default function PemerintahanPage() {
               </div>
             </div>
           ))}
-        </section>
-
-        {/* BPK + Lembaga */}
-        <section id="bpk" className="mt-16 scroll-mt-24">
-          <SectionHeading
-            eyebrow="Kelembagaan"
-            title="BPK & Lembaga Kemasyarakatan"
-            description="Mitra pemerintah kalurahan dalam perencanaan, pengawasan, dan pemberdayaan masyarakat."
-          />
-          <div id="lembaga" className="mt-8 grid gap-5 scroll-mt-24 sm:grid-cols-2 lg:grid-cols-3">
-            {lembaga.map((l, i) => (
-              <ScrollReveal key={l.nama} delay={(i % 3) * 0.06}>
-                <Card className="h-full p-6">
-                  <h3 className="font-bold leading-snug">{l.nama}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{l.peran}</p>
-                  <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-primary">
-                    {l.jumlah}
-                  </p>
-                </Card>
-              </ScrollReveal>
-            ))}
-          </div>
         </section>
       </Container>
     </>

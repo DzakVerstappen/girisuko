@@ -38,16 +38,15 @@ export function Hero() {
         </h1>
         <p className="mt-5 max-w-xl text-lg text-white/85">
           {site.tagline}. Kalurahan di perbukitan karst Panggang yang berdiri
-          sejak {site.founded} dan kini menjadi Desa Wisata. Temukan informasi
-          pemerintahan, layanan publik, potensi, dan transparansi anggaran dalam
-          satu tempat.
+          sejak {site.founded} dan kini menjadi Desa Wisata. Temukan profil
+          kalurahan, kabar terbaru, dan potensi desa dalam satu tempat.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild size="lg">
-            <Link href="/layanan">
+            <Link href="/potensi">
               <Compass className="size-5" />
-              Layanan Publik
+              Jelajahi Potensi Desa
             </Link>
           </Button>
           <Button
@@ -56,8 +55,8 @@ export function Hero() {
             variant="outline"
             className="border-white/40 bg-white/10 text-white backdrop-blur hover:bg-white/20"
           >
-            <Link href="/potensi">
-              Jelajahi Potensi Desa
+            <Link href="/profil">
+              Profil Kalurahan
               <ArrowRight className="size-5" />
             </Link>
           </Button>
