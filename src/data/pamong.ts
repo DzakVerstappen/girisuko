@@ -1,78 +1,126 @@
 import type { Pamong } from "@/types";
 
-const potret = (id: string) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=480&q=70`;
-
-/**
- * Nama dan foto di bawah ini adalah CONTOH (placeholder) semata dan tidak
- * merujuk pada individu nyata. Ganti dengan data Pamong Kalurahan Girisuko.
- */
 export const pamong: Pamong[] = [
   {
-    nama: "R. Ngt. Sasangka Aji",
+    nama: "Jamin Paryanto",
     jabatan: "Lurah",
     kelompok: "Pimpinan",
-    foto: potret("photo-1560250097-0b93528c311a"),
+    foto: "/pamong/Jamin Paryanto.jpeg",
   },
   {
-    nama: "Widarta Nugraha",
+    nama: "Wahyu Setyoningsih",
     jabatan: "Carik (Sekretaris Kalurahan)",
     kelompok: "Pimpinan",
-    foto: potret("photo-1544005313-94ddf0286df2"),
+    foto: "/pamong/Wahyu Setyoningsih.jpeg",
   },
   {
-    nama: "Sukiman",
+    nama: "ISMUHADI",
+    jabatan: "STAF JAGABAYA",
+    kelompok: "Pimpinan",
+    foto: "/pamong/Ismuhadi.jpeg",
+  },
+  {
+    nama: "SUMARINI",
+    jabatan: "Kasi Ulu ulu",
+    kelompok: "Pimpinan",
+    foto: "/pamong/Sumarini.jpeg",
+  },
+
+  {
+    nama: "ILHAM DANU PRIYANTA",
+    jabatan: "KAUR TATA LAKSANA",
+    kelompok: "Pimpinan",
+    foto: "/pamong/Ilham Danu Priyanta.jpeg",
+  },
+  {
+    nama: "TRIYANI",
+    jabatan: "KASI KAMITUWO",
+    kelompok: "Pimpinan",
+    foto: "/pamong/Triyani.jpeg",
+  },
+  {
+    nama: "Endang Sri Lestari",
+    jabatan: "Staf Ulu Ulu",
+    kelompok: "Pimpinan",
+    foto: "/pamong/Endang Sri Lestari.jpeg",
+  },
+  {
+    nama: "Irwan Dwi JArwanto",
+    jabatan: "Kaur Pangripta",
+    kelompok: "Pimpinan",
+    foto: "/pamong/Irwan Dwi Jarwanto.jpeg",
+  },
+  {
+    nama: "MASHUDI",
+    jabatan: "KAUR DANARTA",
+    kelompok: "Pimpinan",
+    foto: "/pamong/Mashudi.jpeg",
+  },
+  {
+    nama: "Ima Silfiana",
+    jabatan: "Staf Tata Laksana",
+    kelompok: "Pimpinan",
+    foto: "/pamong/Ima Silfiana.jpeg",
+  },
+  {
+    nama: "Sri Indah Astuti",
+    jabatan: "Staf Danarta",
+    kelompok: "Pimpinan",
+    foto: "/pamong/Sri Indah Astuti.jpeg",
+  },
+  {
+    nama: "Anton Nurdianzah",
     jabatan: "Dukuh Padukuhan Sumber",
     kelompok: "Pelaksana Kewilayahan",
-    foto: potret("photo-1519085360753-af0119f7cbe7"),
+    foto: "/pamong/Anton Nurdianzah.jpeg",
   },
   {
-    nama: "Yohanes Tri Atmojo",
+    nama: "Angga Septian",
     jabatan: "Dukuh Padukuhan Turunan",
     kelompok: "Pelaksana Kewilayahan",
-    foto: potret("photo-1506794778202-cad84cf45f1d"),
+    foto: "/pamong/Angga Septian.jpeg",
   },
   {
-    nama: "Painem",
+    nama: "Ikhsanudin",
     jabatan: "Dukuh Padukuhan Sanglor 1",
     kelompok: "Pelaksana Kewilayahan",
-    foto: potret("photo-1517841905240-472988babdf9"),
+    foto: "/pamong/Ikhsanudin.jpeg",
   },
   {
-    nama: "Slamet Riyadi",
+    nama: "Luluk Widi Indarsih",
     jabatan: "Dukuh Padukuhan Sanglor 2",
     kelompok: "Pelaksana Kewilayahan",
-    foto: potret("photo-1633332755192-727a05c4013d"),
+    foto: "/pamong/Luluk Widi Indarsih.jpeg",
   },
   {
-    nama: "Mujiyana",
+    nama: "Rusmiyati",
     jabatan: "Dukuh Padukuhan Pacar 1",
     kelompok: "Pelaksana Kewilayahan",
-    foto: potret("photo-1502685104226-ee32379fefbe"),
+    foto: "/pamong/Rusmiyati.jpeg",
   },
   {
-    nama: "Sugeng Riyanto",
+    nama: "Supatman",
     jabatan: "Dukuh Padukuhan Pacar 2",
     kelompok: "Pelaksana Kewilayahan",
-    foto: potret("photo-1508214751196-bcfd4ca60f91"),
+    foto: "/pamong/Supatman.jpeg",
   },
   {
-    nama: "Tukiran",
+    nama: "Sri Winarsih",
     jabatan: "Dukuh Padukuhan Temuireng 1",
     kelompok: "Pelaksana Kewilayahan",
-    foto: potret("photo-1519345182560-3f2917c472ef"),
+    foto: "/pamong/Sri Winarsih.jpeg",
   },
   {
-    nama: "Warsini",
+    nama: "Indra Setiawan",
     jabatan: "Dukuh Padukuhan Temuireng 2",
     kelompok: "Pelaksana Kewilayahan",
-    foto: potret("photo-1500835556837-99ac94a94552"),
+    foto: "/pamong/Indra Setiawan.jpeg",
   },
   {
-    nama: "Ngadiman",
-    jabatan: "Dukuh Padukuhan Gebang",
+    nama: "Irwan Dwi Jarwanto",
+    jabatan: "Plt. Padukuhan Gebang",
     kelompok: "Pelaksana Kewilayahan",
-    foto: potret("photo-1547425260-76bcadfb4f2c"),
+    foto: "/pamong/Irwan Dwi Jarwanto.jpeg",
   },
 ];
 

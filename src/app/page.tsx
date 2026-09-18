@@ -1,4 +1,3 @@
-import { BeritaTerbaru } from "@/components/home/berita-terbaru";
 import { Hero } from "@/components/home/hero";
 import { KontakSection } from "@/components/home/kontak-section";
 import { PotensiUnggulan } from "@/components/home/potensi-unggulan";
@@ -11,7 +10,6 @@ export default function BerandaPage() {
       <Hero />
       <StatsSection />
       <Sambutan />
-      <BeritaTerbaru />
       <PotensiUnggulan />
       <KontakSection />
     </>

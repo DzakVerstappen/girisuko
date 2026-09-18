@@ -74,7 +74,6 @@ export const mainNav: NavItem[] = [
       { label: "Pamong Kalurahan", href: "/pemerintahan#pamong" },
     ],
   },
-  { label: "Berita", href: "/berita" },
   { label: "Potensi", href: "/potensi" },
   { label: "Kontak", href: "/kontak" },
 ];
@@ -85,7 +84,6 @@ export const footerNav = [
     links: [
       { label: "Profil Kalurahan", href: "/profil" },
       { label: "Pemerintahan", href: "/pemerintahan" },
-      { label: "Berita & Pengumuman", href: "/berita" },
       { label: "Potensi Desa", href: "/potensi" },
     ],
   },

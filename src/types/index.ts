@@ -1,23 +1,3 @@
-export type Kategori =
-  | "Pengumuman"
-  | "Pembangunan"
-  | "Kegiatan"
-  | "Sosial"
-  | "Ekonomi"
-  | "Kesehatan";
-
-export type Berita = {
-  slug: string;
-  judul: string;
-  ringkasan: string;
-  konten: string[];
-  kategori: Kategori;
-  tanggal: string;
-  penulis: string;
-  gambar: string;
-  unggulan?: boolean;
-};
-
 export type Pamong = {
   nama: string;
   jabatan: string;
@@ -39,4 +19,6 @@ export type Padukuhan = {
   dukuh: string;
   kk: number;
   jiwa: number;
+  lakiLaki: number;
+  perempuan: number;
 };

@@ -52,13 +52,25 @@ const misi = [
 const fakta = [
   { label: "Hari jadi", value: site.founded, icon: CalendarDays },
   { label: "Jumlah penduduk", value: "± 5.500 jiwa", icon: Users },
-  { label: "Padukuhan", value: `${s.jumlahPadukuhan} padukuhan`, icon: Compass },
-  { label: "Status", value: "Desa Wisata (Jadesta Kemenparekraf)", icon: Sparkles },
+  {
+    label: "Padukuhan",
+    value: `${s.jumlahPadukuhan} padukuhan`,
+    icon: Compass,
+  },
+  {
+    label: "Status",
+    value: "Desa Wisata (Jadesta Kemenparekraf)",
+    icon: Sparkles,
+  },
 ];
 
 const geografis = [
   { label: "Luas wilayah", value: `± ${s.luasWilayahKm2} km²`, icon: Mountain },
-  { label: "Jumlah padukuhan", value: `${s.jumlahPadukuhan} padukuhan`, icon: Compass },
+  {
+    label: "Jumlah padukuhan",
+    value: `${s.jumlahPadukuhan} padukuhan`,
+    icon: Compass,
+  },
   {
     label: "Topografi",
     value: "Perbukitan karst selatan Gunungkidul",
@@ -100,7 +112,9 @@ export default function ProfilPage() {
               <dt className="mt-2 text-xs uppercase tracking-wider text-muted-foreground">
                 {f.label}
               </dt>
-              <dd className="font-display font-bold leading-tight">{f.value}</dd>
+              <dd className="font-display font-bold leading-tight">
+                {f.value}
+              </dd>
             </div>
           ))}
         </dl>
@@ -119,8 +133,8 @@ export default function ProfilPage() {
               diperingati berdiri pada{" "}
               <strong className="text-foreground">{site.founded}</strong> dan
               berkembang dari padukuhan-padukuhan permukiman lama yang tersebar
-              mengikuti sumber air dan lahan garapan di kawasan karst Gunungkidul
-              selatan.
+              mengikuti sumber air dan lahan garapan di kawasan karst
+              Gunungkidul selatan.
             </p>
             <p>
               Sejak berlakunya Undang-Undang Keistimewaan Daerah Istimewa
@@ -128,10 +142,11 @@ export default function ProfilPage() {
               <strong className="text-foreground">kalurahan</strong> dan kepala
               desa menjadi <strong className="text-foreground">lurah</strong>{" "}
               dengan perangkat yang disebut pamong kalurahan. Kini Girisuko juga
-              tercatat sebagai <strong className="text-foreground">Desa Wisata</strong>{" "}
-              pada Jadesta Kemenparekraf, dengan andalan bentang alam karst dan
-              kekuatan gotong royong warga yang antara lain dirawat lewat tradisi
-              tahunan <em>Tilik Dusun</em>.
+              tercatat sebagai{" "}
+              <strong className="text-foreground">Desa Wisata</strong> pada
+              Jadesta Kemenparekraf, dengan andalan bentang alam karst dan
+              kekuatan gotong royong warga yang antara lain dirawat lewat
+              tradisi tahunan <em>Tilik Dusun</em>.
             </p>
           </div>
         </section>
@@ -150,7 +165,10 @@ export default function ProfilPage() {
               <h3 className="text-xl font-bold">Misi</h3>
               <ol className="mt-4 flex flex-col gap-3">
                 {misi.map((m, i) => (
-                  <li key={i} className="flex gap-3 text-sm text-muted-foreground">
+                  <li
+                    key={i}
+                    className="flex gap-3 text-sm text-muted-foreground"
+                  >
                     <span className="grid size-6 shrink-0 place-items-center rounded-full bg-accent text-xs font-bold text-accent-foreground">
                       {i + 1}
                     </span>
@@ -227,7 +245,7 @@ export default function ProfilPage() {
           <SectionHeading
             eyebrow="Data Demografi"
             title="Kependudukan Girisuko"
-            description="Total penduduk ± 5.500 jiwa. Rincian per kelompok merupakan perkiraan proporsional dan disesuaikan dengan pemutakhiran data resmi."
+            description="Nama padukuhan sudah sesuai. Angka KK, jiwa, laki-laki, dan perempuan merupakan hasil data dari SID Girisuko 6.561 jiwa. "
           />
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -302,14 +320,20 @@ export default function ProfilPage() {
           <SectionHeading
             eyebrow="Wilayah"
             title={`${padukuhan.length} Padukuhan di Girisuko`}
-            description="Nama padukuhan sudah sesuai. Angka KK dan jiwa merupakan perkiraan proporsional dari total ± 5.500 jiwa dan perlu dimutakhirkan."
+            description="Nama padukuhan sudah sesuai. Angka KK, jiwa, laki-laki, dan perempuan merupakan hasil data dari SID Girisuko 6.561 jiwa. "
           />
           <div className="mt-6 overflow-x-auto rounded-xl border border-border">
-            <table className="w-full min-w-[420px] text-left text-sm">
+            <table className="w-full min-w-[560px] text-left text-sm">
               <thead className="bg-muted text-muted-foreground">
                 <tr>
                   <th className="px-4 py-3 font-semibold">Padukuhan</th>
                   <th className="px-4 py-3 font-semibold text-right">KK</th>
+                  <th className="px-4 py-3 font-semibold text-right">
+                    Laki-laki
+                  </th>
+                  <th className="px-4 py-3 font-semibold text-right">
+                    Perempuan
+                  </th>
                   <th className="px-4 py-3 font-semibold text-right">Jiwa</th>
                 </tr>
               </thead>
@@ -319,6 +343,12 @@ export default function ProfilPage() {
                     <td className="px-4 py-3 font-medium">{p.nama}</td>
                     <td className="px-4 py-3 text-right tabular-nums">
                       {p.kk.toLocaleString("id-ID")}
+                    </td>
+                    <td className="px-4 py-3 text-right tabular-nums">
+                      {p.lakiLaki.toLocaleString("id-ID")}
+                    </td>
+                    <td className="px-4 py-3 text-right tabular-nums">
+                      {p.perempuan.toLocaleString("id-ID")}
                     </td>
                     <td className="px-4 py-3 text-right tabular-nums">
                       {p.jiwa.toLocaleString("id-ID")}
@@ -332,6 +362,16 @@ export default function ProfilPage() {
                   <td className="px-4 py-3 text-right tabular-nums">
                     {padukuhan
                       .reduce((a, b) => a + b.kk, 0)
+                      .toLocaleString("id-ID")}
+                  </td>
+                  <td className="px-4 py-3 text-right tabular-nums">
+                    {padukuhan
+                      .reduce((a, b) => a + b.lakiLaki, 0)
+                      .toLocaleString("id-ID")}
+                  </td>
+                  <td className="px-4 py-3 text-right tabular-nums">
+                    {padukuhan
+                      .reduce((a, b) => a + b.perempuan, 0)
                       .toLocaleString("id-ID")}
                   </td>
                   <td className="px-4 py-3 text-right tabular-nums">

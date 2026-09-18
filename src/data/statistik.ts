@@ -5,13 +5,13 @@
  */
 
 export const ringkasanStatistik = {
-  totalPenduduk: 5500,
-  kepalaKeluarga: 1762,
+  totalPenduduk: 6561,
+  kepalaKeluarga: 2170,
   jumlahPadukuhan: 9,
   luasWilayahKm2: 12.4,
   curahHujanMmTahun: 1382,
-  lakiLaki: 2755,
-  perempuan: 2745,
+  lakiLaki: 3194,
+  perempuan: 3367,
   wajibKtp: 4180,
   penerimaBantuan: 540,
 };
@@ -25,12 +25,12 @@ export const pendudukPerTahun = [
 ];
 
 export const kelompokUmur = [
-  { kelompok: "0–4", lakiLaki: 150, perempuan: 143 },
-  { kelompok: "5–14", lakiLaki: 430, perempuan: 410 },
-  { kelompok: "15–24", lakiLaki: 470, perempuan: 450 },
-  { kelompok: "25–44", lakiLaki: 820, perempuan: 800 },
-  { kelompok: "45–64", lakiLaki: 610, perempuan: 625 },
-  { kelompok: "65+", lakiLaki: 275, perempuan: 317 },
+  { kelompok: "0–4", lakiLaki: 33, perempuan: 38 },
+  { kelompok: "5–14", lakiLaki: 283, perempuan: 288 },
+  { kelompok: "15–24", lakiLaki: 441, perempuan: 402 },
+  { kelompok: "25–44", lakiLaki: 949, perempuan: 893 },
+  { kelompok: "45–64", lakiLaki: 785, perempuan: 876 },
+  { kelompok: "65+", lakiLaki: 701, perempuan: 909 },
 ];
 
 export const mataPencaharian = [

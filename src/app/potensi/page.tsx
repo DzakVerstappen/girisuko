@@ -23,26 +23,27 @@ export default function PotensiPage() {
       >
         <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-muted-foreground">
           <span>
-            <strong className="text-foreground">{jml("Wisata")}</strong> destinasi wisata
+            <strong className="text-foreground">{jml("Wisata")}</strong>{" "}
+            destinasi wisata
           </span>
           <span>
-            <strong className="text-foreground">{jml("UMKM")}</strong> produk UMKM
+            <strong className="text-foreground">{jml("UMKM")}</strong> produk
+            UMKM
           </span>
           <span>
-            <strong className="text-foreground">{jml("Pertanian")}</strong> komoditas
+            <strong className="text-foreground">{jml("Pertanian")}</strong>{" "}
+            komoditas
           </span>
           <span>
-            <strong className="text-foreground">{jml("Budaya")}</strong> kelompok budaya
+            <strong className="text-foreground">{jml("Budaya")}</strong>{" "}
+            kelompok budaya
           </span>
         </div>
       </PageHero>
 
       <Container className="py-16 sm:py-20">
         <PotensiGrid items={potensi} />
-        <p className="mt-8 text-center text-xs text-muted-foreground">
-          Nama destinasi dan UMKM sesuai kondisi lapangan. Foto masih memakai
-          gambar contoh dan penempatan padukuhan bersifat indikatif.
-        </p>
+        <p className="mt-8 text-center text-xs text-muted-foreground"></p>
       </Container>
     </>
   );

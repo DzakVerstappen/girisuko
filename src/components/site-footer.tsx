@@ -86,6 +86,32 @@ export function SiteFooter() {
           <p>Kapanewon Panggang, Gunungkidul, D.I. Yogyakarta</p>
         </Container>
       </div>
+
+      <div className="border-t border-border/60">
+        <Container className="py-4 text-center text-[11px] leading-relaxed text-muted-foreground/80">
+          <p>
+            Dirancang dan dikembangkan dengan penuh dedikasi oleh{" "}
+            <span className="font-semibold text-foreground/80">
+              Tim KKN Universitas Islam Indonesia Angkatan 73
+            </span>
+            , sebagai kontribusi bagi kemajuan digital{" "}
+            <span className="font-semibold text-foreground/80">
+              Kalurahan Girisuko
+            </span>
+            .
+          </p>
+          <p className="mt-1">
+            oleh{" "}
+            <span className="font-semibold text-foreground/80">
+              Alfonso Fiter Ferdiansyah
+            </span>{" "}
+            dan{" "}
+            <span className="font-semibold text-foreground/80">
+              Syahru Dzaki Muhammad
+            </span>
+          </p>
+        </Container>
+      </div>
     </footer>
   );
 }

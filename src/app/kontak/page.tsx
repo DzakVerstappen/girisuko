@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/page-hero";
 import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
@@ -75,27 +74,17 @@ export default function KontakPage() {
                 ))}
               </ul>
             </Card>
-
-            <div className="overflow-hidden rounded-xl border border-border">
-              <iframe
-                title="Peta lokasi Kantor Kalurahan Girisuko"
-                src={site.maps.embedSrc}
-                loading="lazy"
-                className="h-64 w-full border-0"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
           </div>
 
-          <Card className="p-6 sm:p-8">
-            <h2 className="text-lg font-bold">Kirim Pesan</h2>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Isi formulir di bawah ini dan tim kalurahan akan menindaklanjuti.
-            </p>
-            <div className="mt-6">
-              <ContactForm />
-            </div>
-          </Card>
+          <div className="overflow-hidden rounded-xl border border-border">
+            <iframe
+              title="Peta lokasi Kantor Kalurahan Girisuko"
+              src={site.maps.embedSrc}
+              loading="lazy"
+              className="h-full min-h-[420px] w-full border-0"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
       </Container>
     </>
